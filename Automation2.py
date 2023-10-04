@@ -10,7 +10,7 @@ import pandas as pd
 
 # Function to perform the analysis
 def analyze_complaints(data):
-    df = pd.read_excel(data)
+    df = pd.read_csv(uploaded_file)
     
     # Create a pivot table to aggregate data
     pivot_table = df.pivot_table(index='Zone', columns='Status Name', aggfunc='size', fill_value=0)
